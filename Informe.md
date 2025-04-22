@@ -67,3 +67,4 @@ Desde phpMyAdmin, creamos una base de datos llamada testdb.
 <imag!
 ### Resultados:
 
+
