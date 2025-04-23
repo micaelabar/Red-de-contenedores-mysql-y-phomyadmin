@@ -93,11 +93,11 @@ http://localhost:8081
 ## Evidencia:
 <imag!![imagen 8](https://github.com/user-attachments/assets/71ce6cf0-ea04-4a40-a278-f2c9b9eba120)
 
-### Paso 9. Verifica que la base de datos se haya creado correctamente.
+### Resultados:ç
+Verifica que la base de datos se haya creado correctamente .
 ## Evidencia:
 <imag!![imagen 9](https://github.com/user-attachments/assets/ab23a250-1214-4fa2-b0d3-585e9e604621)
-
-### Resultados:
+Código SQL para crear una base de datos de prueba.
 ## Evidencia:
 <imag!![resultado](https://github.com/user-attachments/assets/9b684239-bf95-4471-912a-3ed5f474b798)
 
