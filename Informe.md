@@ -8,7 +8,7 @@ En esta práctica se abordan conceptos clave de virtualización ligera mediante 
 Docker es una plataforma de contenedores que permite ejecutar aplicaciones de forma aislada, rápida y replicable. MySQL es un sistema de gestión de bases de datos relacional ampliamente utilizado, mientras que phpMyAdmin es una aplicación web que facilita la administración de bases de datos MySQL a través de una interfaz gráfica.
 
 Los objetivos de esta actividad incluyen aprender a crear contenedores individuales con servicios que interactúan entre sí, configurar redes personalizadas en Docker, y validar la correcta comunicación entre los contenedores a través de la creación de una base de datos de prueba. Esta práctica representa un paso esencial hacia el desarrollo de soluciones escalables en arquitecturas de microservicios.
-## Conocimientos previos
+## Conocimientos previos:
 - Uso básico de Docker (comandos como run, ps, network).
 - Conocimiento general de bases de datos relacionales (MySQL).
 - Conceptos básicos de redes (puertos, nombres de host).
