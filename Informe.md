@@ -56,7 +56,7 @@ docker ps
 ### Paso 5. Crear una red personalizada en Docker.
 Crear una red personalizada para que los contenedores puedan comunicarse entre sí de manera segura:
 ```
-docker network create my-network
+docker run --name phpmyadmin-v2 --network my-network -p 8081:80 -e PMA_HOST=mysql-container -d phpmyadmin/phpmyadmin
 ````
 ## Evidencia:
 <imag!
