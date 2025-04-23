@@ -72,7 +72,7 @@ docker network connect my-network phpmyadmin-container
 ### Paso 7. Configurar la conexión entre phpMyAdmin y MySQL.
 Acceder a phpMyAdmin. Abre un navegador web y accede a:
 ```
-http://localhost:8080
+http://localhost:8081
 ````
 ## Evidencia:
 <imag!
