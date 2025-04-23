@@ -28,41 +28,62 @@ Los objetivos de esta actividad incluyen aprender a crear contenedores individua
 - Guía de instalación de MySQL Docker: https://hub.docker.com/_/mysql
 - Documentación de phpMyAdmin: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 ## Procedimiento
-### Paso 1. Crear un contenedor para MySQL
-Puedes crear un contenedor para MySQL utilizando el siguiente comando en Docker:
+### Paso 1. Abrir la terminal en Ubuntu.
+Ejecutar el siguiente comando para crear un contenedor de MySQL. En este ejemplo, configuramos las credenciales necesarias (MYSQL_ROOT_PASSWORD, MYSQL_DATABASE y MYSQL_USER):
 ```
-docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=rootpassword -d mysql:latest
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=mi_contraseña -e MYSQL_DATABASE=mi_base_de_datos -e MYSQL_USER=mi_usuario -e MYSQL_PASSWORD=mi_password -d mysql:latest
 ````
 ## Evidencia:
 <imag!
-### Paso 2. Crear un contenedor para phpMyAdmin
-A continuación, crea un contenedor para phpMyAdmin, asegurándote de que pueda comunicarse con el contenedor MySQL:
+### Paso 2. Verificar que el contenedor esté en funcionamiento:
 ```
-docker run --name phpmyadmin-container -d --link mysql-container:db -p 8080:80 phpmyadmin/phpmyadmin
+docker ps
 ````
 ## Evidencia:
 <imag!
-### Paso 3. Crear una red personalizada en Docker
-Para que ambos contenedores puedan comunicarse, primero crea una red personalizada:
+### Paso 3. Crear un contenedor para phpMyAdmin.
+Ejecutar el siguiente comando para crear un contenedor de phpMyAdmin. Conectamos phpMyAdmin al contenedor de MySQL mediante variables de entorno:
 ```
-docker network create my_network
+docker run --name phpmyadmin-container --link mysql-container:db -p 8080:80 -d phpmyadmin/phpmyadmin
 ````
-### Paso 4. Conectar ambos contenedores a la red: 
-Conectamos los contenedores a la red personalizada:
+### Paso 4. Verificar que el contenedor phpMyAdmin esté funcionando.
+Esto debe mostrar que el contenedor phpmyadmin-container está en ejecución.
 ```
-docker network connect my_network mysql-container
-````
-```
-docker network connect my_network phpmyadmin-container
+docker ps
 ````
 ## Evidencia:
 <imag!
-### Paso 5. Configurar la conexión entre phpMyAdmin y MySQL:
-Accedemos a phpMyAdmin en el navegador (http://localhost:8080) y configuramos la conexión con las credenciales proporcionadas.
+### Paso 5. Crear una red personalizada en Docker
+Crear una red personalizada para que los contenedores puedan comunicarse entre sí de manera segura:
+```
+docker network create my-network
+````
 ## Evidencia:
 <imag!
-### Paso 6. Crear una base de datos de prueba:
-Desde phpMyAdmin, creamos una base de datos llamada testdb.
+### Paso 6. Conectar ambos contenedores a la red:
+```
+docker network connect my-network mysql-container
+````
+```
+docker network connect my-network phpmyadmin-container
+````
+## Evidencia:
+<imag!
+### Paso 7. Configurar la conexión entre phpMyAdmin y MySQL
+Acceder a phpMyAdmin. Abre un navegador web y accede a:
+```
+http://localhost:8080
+````
+## Evidencia:
+<imag!
+### Paso 8. Crear una base de datos de prueba
+1. Una vez dentro de la interfaz de phpMyAdmin, crear una base de datos de prueba:
+2. Haz clic en "Bases de datos" en el menú superior.
+3. Escribe un nombre para la base de datos, por ejemplo, test_db.
+4. Haz clic en "Crear".
+## Evidencia:
+<imag!
+### Paso 9. Verifica que la base de datos se haya creado correctamente.
 ## Evidencia:
 <imag!
 ### Resultados:
