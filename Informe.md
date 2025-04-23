@@ -93,12 +93,16 @@ http://localhost:8081
 ## Evidencia:
 <imag!![imagen 8](https://github.com/user-attachments/assets/71ce6cf0-ea04-4a40-a278-f2c9b9eba120)
 
-### Resultados:ç
+### Resultados:
 Verifica que la base de datos se haya creado correctamente .
 ## Evidencia:
 <imag!![imagen 9](https://github.com/user-attachments/assets/ab23a250-1214-4fa2-b0d3-585e9e604621)
+
 Código SQL para crear una base de datos de prueba.
 ## Evidencia:
 <imag!![resultado](https://github.com/user-attachments/assets/9b684239-bf95-4471-912a-3ed5f474b798)
+
+### Conclusión:
+En esta práctica se logró configurar con éxito un entorno de base de datos utilizando contenedores Docker, demostrando la eficiencia y facilidad que ofrece esta herramienta para el despliegue de servicios. Se crearon dos contenedores: uno para MySQL y otro para phpMyAdmin, configurando sus credenciales adecuadamente. Además, se implementó una red personalizada para permitir la comunicación segura entre ambos servicios. A través de la interfaz de phpMyAdmin, se verificó la conexión con el contenedor de MySQL y se creó una base de datos de prueba. Esta actividad fortaleció el conocimiento práctico sobre contenedores, redes personalizadas en Docker y la gestión de bases de datos de manera eficiente y portátil, lo cual es esencial en entornos modernos de desarrollo y despliegue de aplicaciones.
 
 
